@@ -1,0 +1,13 @@
+---
+# tasks file for nodejs
+- set_fact:
+    ansible_facts:
+      pkg_mgr: yum
+
+- name: Installing node and npm
+  yum:
+    name: ['nodejs', 'npm']
+    enablerepo: epel
+    state: installed
+
+
